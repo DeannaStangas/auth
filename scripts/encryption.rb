@@ -4,5 +4,11 @@
 
 # TODO:
 # 1. encrypt a secret and puts encrypted string
+secret = "puppies"
+puts secret
+encrypted_secret = BCrypt::Password.create(secret)
+puts encrypted_secret
 # 2. prepare encrypted string for testing
+user_submitted_secret = "kittens"
+BCrypt::Password.new(encrypted) == secret
 # 3. test secret against prepared encrypted string
